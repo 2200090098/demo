@@ -1,0 +1,16 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    # Compile and run the C program
+    gcc hello_world.c -o hello_world
+    ./hello_world
+  displayName: 'Compile and run C program'
+
